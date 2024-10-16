@@ -3,29 +3,26 @@
 import {
   Box,
   Flex,
-  Avatar,
   HStack,
-  Text,
   IconButton,
   Button,
   Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   useColorMode,
   Stack,
+  WrapItem
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
+import { Avatar } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 
 interface Props {
   children: React.ReactNode
 }
 
-const Links = ['Dashboard', 'Projects', 'Team']
+const Links = ['About Me', 'Tech Stack', 'Contact']
 
 export const NavLink = (props: Props) => {
   const { children } = props
@@ -52,7 +49,9 @@ export default function Simple() {
 
   return (
     <>
+    
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+        <Container maxW='container.lg'>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -62,7 +61,11 @@ export default function Simple() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
+            <Box>  
+              <WrapItem>
+                <Avatar name='Liban Hussein' src='src\assets\avataaars.png' />
+              </WrapItem>
+            </Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
@@ -87,9 +90,10 @@ export default function Simple() {
             </Stack>
           </Box>
         ) : null}
+        </Container>
       </Box>
 
-      <Box p={4}>Main Content Here</Box>
+      {/*<Box p={4}>Main Content Here</Box>*/}
     </>
   )
 }
