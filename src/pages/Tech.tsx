@@ -3,8 +3,10 @@ import {
     Stack,
     Container,
     Heading,
-    chakra
   } from '@chakra-ui/react'
+
+  import Card from '../components/Card'
+  import data from '../data/tech.json'
 
 function Tech() {
   return (
@@ -14,9 +16,11 @@ function Tech() {
                 <Heading>
                     Tech Stack
                 </Heading>
-                <chakra.svg>
-                    <path d="src\assets\PowerFx_scalable.svg"/>
-                </chakra.svg>
+                <Stack gap="4" direction="row" wrap="wrap" mt={30} mb={30}>
+                {data.data.map(item => (
+                  <Card dataCard={item}/>
+    ))}
+            </Stack>
             </Container>
         </Stack>
     </ChakraProvider>

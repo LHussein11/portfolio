@@ -15,3 +15,8 @@
     transform-origin: 70% 70%;
     display: inline-block;
 }
+
+.cardImg {
+  height: 60px;
+  width: 60px;
+}

@@ -1,0 +1,29 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "title": "Sharepoint",
+        "img": "src\\assets\\sharepoint-icon.svg"
+      },
+      {
+        "id": 2,
+        "title": "Dataverse logo",
+        "img": "src\\assets\\Dataverse_scalable.svg"
+      },
+      {
+        "id": 3,
+        "title": "PowerApps",
+        "img": "src\\assets\\PowerApps_scalable.svg"
+      },
+      {
+        "id": 4,
+        "title": "Power Automate",
+        "img": "src\\assets\\PowerAutomate_scalable.svg"
+      },
+      {
+        "id": 5,
+        "title": "PowerFx",
+        "img": "src\\assets\\PowerFx_scalable.svg"
+      }
+    ]
+}
