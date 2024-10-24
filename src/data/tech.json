@@ -24,6 +24,26 @@
         "id": 5,
         "title": "PowerFx",
         "img": "src\\assets\\PowerFx_scalable.svg"
+      },
+      {
+        "id": 6,
+        "title": "JavaScript",
+        "img": "src\\assets\\javascript-logo-svgrepo-com.svg"
+      },
+      {
+        "id": 7,
+        "title": "React",
+        "img": "src\\assets\\react.svg"
+      },
+      {
+        "id": 8,
+        "title": "MongoDB",
+        "img": "src\\assets\\mongodb-svgrepo-com.svg"
+      },
+      {
+        "id": 9,
+        "title": "CSS",
+        "img": "src\\assets\\css-3.svg"
       }
     ]
 }

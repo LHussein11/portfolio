@@ -3,7 +3,6 @@ import {
     CardBody,
     CardHeader ,
     Heading,
-    Stack,
     Center
 } from '@chakra-ui/react'
 
@@ -12,7 +11,7 @@ function Card({dataCard}) {
   return (
     <Cards 
     width={300} 
-    height={150}
+    height={100}
     direction={{base: 'row', sm: 'row'}}
     variant='outline'
     >
