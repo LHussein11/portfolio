@@ -1,49 +1,60 @@
 {
-    "data": [
+    "defaultData": [
       {
         "id": 1,
         "title": "Sharepoint",
-        "img": "src\\assets\\sharepoint-icon.svg"
+        "img": "src\\assets\\sharepoint-icon.svg",
+        "tech": "m365"
       },
       {
         "id": 2,
-        "title": "Dataverse logo",
-        "img": "src\\assets\\Dataverse_scalable.svg"
+        "title": "Dataverse",
+        "img": "src\\assets\\Dataverse_scalable.svg",
+        "tech": "m365"
       },
       {
         "id": 3,
         "title": "PowerApps",
-        "img": "src\\assets\\PowerApps_scalable.svg"
+        "img": "src\\assets\\PowerApps_scalable.svg",
+        "tech": "m365"
       },
       {
         "id": 4,
         "title": "Power Automate",
-        "img": "src\\assets\\PowerAutomate_scalable.svg"
+        "img": "src\\assets\\PowerAutomate_scalable.svg",
+        "tech": "m365"
       },
       {
         "id": 5,
         "title": "PowerFx",
-        "img": "src\\assets\\PowerFx_scalable.svg"
-      },
+        "img": "src\\assets\\PowerFx_scalable.svg",
+        "tech": "m365"
+      }
+    ],
+    "alternateData":[
       {
-        "id": 6,
+        "id": 1,
         "title": "JavaScript",
-        "img": "src\\assets\\javascript-logo-svgrepo-com.svg"
+        "img": "src\\assets\\javascript-logo-svgrepo-com.svg",
+        "tech": "frontend"
       },
       {
-        "id": 7,
+        "id": 2,
         "title": "React",
-        "img": "src\\assets\\react.svg"
+        "img": "src\\assets\\react.svg",
+        "tech": "frontend"
       },
       {
-        "id": 8,
+        "id": 3,
         "title": "MongoDB",
-        "img": "src\\assets\\mongodb-svgrepo-com.svg"
+        "img": "src\\assets\\mongodb-svgrepo-com.svg",
+        "tech": "frontend"
       },
       {
-        "id": 9,
+        "id": 4,
         "title": "CSS",
-        "img": "src\\assets\\css-3.svg"
+        "img": "src\\assets\\css-3.svg",
+        "tech": "frontend"
       }
     ]
 }

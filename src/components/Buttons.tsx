@@ -2,9 +2,9 @@ import {
     Button
   } from '@chakra-ui/react'
 
-function Buttons({input}) {
+function Buttons({input, event, info}) {
   return (
-    <Button variant={'solid'}>
+    <Button onClick={() => event(info)} variant={'solid'}>
         {input}
     </Button>
   )
