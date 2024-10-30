@@ -3,31 +3,31 @@
       {
         "id": 1,
         "title": "Sharepoint",
-        "img": "public\\sharepoint-icon.svg",
+        "img": "public//sharepoint-icon.svg",
         "tech": "m365"
       },
       {
         "id": 2,
         "title": "Dataverse",
-        "img": "public\\Dataverse_scalable.svg",
+        "img": "public//Dataverse_scalable.svg",
         "tech": "m365"
       },
       {
         "id": 3,
         "title": "PowerApps",
-        "img": "public\\PowerApps_scalable.svg",
+        "img": "public//PowerApps_scalable.svg",
         "tech": "m365"
       },
       {
         "id": 4,
         "title": "Power Automate",
-        "img": "public\\PowerAutomate_scalable.svg",
+        "img": "public//PowerAutomate_scalable.svg",
         "tech": "m365"
       },
       {
         "id": 5,
         "title": "PowerFx",
-        "img": "public\\PowerFx_scalable.svg",
+        "img": "public//PowerFx_scalable.svg",
         "tech": "m365"
       }
     ],
