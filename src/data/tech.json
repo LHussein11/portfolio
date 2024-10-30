@@ -3,31 +3,31 @@
       {
         "id": 1,
         "title": "Sharepoint",
-        "img": "public//sharepoint-icon.svg",
+        "img": "sharepoint-icon.svg",
         "tech": "m365"
       },
       {
         "id": 2,
         "title": "Dataverse",
-        "img": "public//Dataverse_scalable.svg",
+        "img": "Dataverse_scalable.svg",
         "tech": "m365"
       },
       {
         "id": 3,
         "title": "PowerApps",
-        "img": "public//PowerApps_scalable.svg",
+        "img": "PowerApps_scalable.svg",
         "tech": "m365"
       },
       {
         "id": 4,
         "title": "Power Automate",
-        "img": "public//PowerAutomate_scalable.svg",
+        "img": "PowerAutomate_scalable.svg",
         "tech": "m365"
       },
       {
         "id": 5,
         "title": "PowerFx",
-        "img": "public//PowerFx_scalable.svg",
+        "img": "PowerFx_scalable.svg",
         "tech": "m365"
       }
     ],
@@ -35,25 +35,25 @@
       {
         "id": 1,
         "title": "JavaScript",
-        "img": "public\\javascript-logo-svgrepo-com.svg",
+        "img": "javascript-logo-svgrepo-com.svg",
         "tech": "frontend"
       },
       {
         "id": 2,
         "title": "React",
-        "img": "public\\react.svg",
+        "img": "react.svg",
         "tech": "frontend"
       },
       {
         "id": 3,
         "title": "MongoDB",
-        "img": "public\\mongodb-svgrepo-com.svg",
+        "img": "mongodb-svgrepo-com.svg",
         "tech": "frontend"
       },
       {
         "id": 4,
         "title": "CSS",
-        "img": "public\\css-3.svg",
+        "img": "css-3.svg",
         "tech": "frontend"
       }
     ]
