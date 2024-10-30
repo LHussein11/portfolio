@@ -2,12 +2,14 @@ import {
     Button
   } from '@chakra-ui/react'
 
-function Buttons({input='', event=() => {}, info=''}) {
-  return (
-    <Button onClick={() => event(info)} variant={'solid'}>
-        {input}
-    </Button>
-  )
-}
+  type ButtonProps = {
+    input: string;
+    event: (info: string) => void;
+    info: string;
+  };
+  
+  const Buttons: React.FC<ButtonProps> = ({ input, event, info }) => {
+    return <Button onClick={() => event(info)}>{input}</Button>;
+  };
 
 export default Buttons

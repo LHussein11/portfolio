@@ -30,11 +30,13 @@ import {
 
 function Tech() {
 
-  const [view, setView] = useState<'default' | 'alternate'>('default');
-  const dataToShow = view === 'default' ? data.defaultData : data.alternateData
+  const techData: Data = data;
 
-  const handleViewChange = (view: 'default' | 'alternate') => {
-    setView(view);
+  const [view, setView] = useState<'default' | 'alternate'>('default');
+  const dataToShow = view === 'default' ? techData.defaultData : techData.alternateData
+
+  const handleViewChange = (info:string) => {
+    setView(info === 'default' ? 'default' : 'alternate');
   }
 
   return (
