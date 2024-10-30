@@ -23,7 +23,7 @@ interface Props {
   children: React.ReactNode
 }
 
-const Links = ['About Me', 'Tech Stack', 'Contact']
+const Links = ['About Me', 'Tech Stack']
 
 export const NavLink = (props: Props) => {
   const { children } = props
@@ -64,7 +64,7 @@ export default function Simple() {
           <HStack spacing={8} alignItems={'center'}>
             <Box>  
               <WrapItem>
-                <Avatar name='Liban Hussein' src='public\avataaars.png' />
+                <Avatar name='Liban Hussein' src='avataaars.png' />
               </WrapItem>
             </Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
@@ -89,7 +89,7 @@ export default function Simple() {
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
                 <NavLink key={link}>
-                  {link}
+                  <Link to={link}> {link}</Link>
                 </NavLink>
               ))}
             </Stack>
