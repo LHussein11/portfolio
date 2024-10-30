@@ -6,7 +6,13 @@ import {
     Center
 } from '@chakra-ui/react'
 
-function Card({dataCard}) {
+import { Item } from '../pages/Tech'
+
+type CardProps = {
+  dataCard: Item;
+};
+
+function Card({dataCard}: CardProps) {
 
   return (
     <Cards 

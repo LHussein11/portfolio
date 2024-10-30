@@ -15,7 +15,7 @@ import {
   const searchItem = "m365";
   data.defaultData.filter(item => console.log(item.tech === searchItem))
 
-  type Item = {
+  export type Item = {
     id: number;
     title: string;
     img: string;
@@ -33,7 +33,7 @@ function Tech() {
   const techData: Data = data;
 
   const [view, setView] = useState<'default' | 'alternate'>('default');
-  const dataToShow = view === 'default' ? techData.defaultData : techData.alternateData
+  const dataToShow: Item[] = view === 'default' ? techData.defaultData : techData.alternateData
 
   const handleViewChange = (info:string) => {
     setView(info === 'default' ? 'default' : 'alternate');
