@@ -17,6 +17,7 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { Avatar } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
+import { Link } from 'react-scroll'
 
 interface Props {
   children: React.ReactNode
@@ -68,7 +69,9 @@ export default function Simple() {
             </Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link}>
+                  <Link to={link}> {link}</Link>
+                </NavLink>
               ))}
             </HStack>
           </HStack>
@@ -85,7 +88,9 @@ export default function Simple() {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link}>
+                  {link}
+                </NavLink>
               ))}
             </Stack>
           </Box>

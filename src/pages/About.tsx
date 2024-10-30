@@ -3,11 +3,14 @@ import {
     Stack,
     Container,
     Heading,
-    Text
+    Text,
+    Button
   } from '@chakra-ui/react'
 
 import { extendTheme } from '@chakra-ui/react'
 import '../App.css'
+import resume from '../../public/My Resume.pdf'
+//import Button from '../components/Buttons' 
 
   const theme = extendTheme({
     fontSize: {
@@ -15,6 +18,7 @@ import '../App.css'
         body: `'20px`,
     }
   })
+
 
 
 function About() {
@@ -27,7 +31,7 @@ function About() {
                 >👋</span>
                 </Heading>
                 <Stack spacing={'10px'}>
-                    <Text>I'm a passionate Microsoft 365 & Frontend Developer with a knack for transforming innovative ideas into reality. With expertise in SharePoint, Power Platform, and Teams, 
+                    <Text id='About Me'>I'm a passionate Microsoft 365 & Frontend Developer with a knack for transforming innovative ideas into reality. With expertise in SharePoint, Power Platform, and Teams, 
                     </Text>
                     <Text>
                     I specialize in creating seamless digital experiences that enhance productivity and collaboration.    
@@ -35,6 +39,13 @@ function About() {
                     <Text>
                     Driven by a love for technology and continuous learning, I aim to empower organizations to harness the full potential of Microsoft 365 solutions. Let's build the future together! 
                     </Text>
+                    <Stack direction={'row'} mt={5} >
+                      <Button>
+                        <a href={resume} target='_blank'>
+                        Download CV
+                        </a>
+                      </Button>
+                    </Stack>
                     </Stack>
             </Stack>
             </Container>

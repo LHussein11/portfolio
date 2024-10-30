@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState } from 'react';
+//import { RiMicrosoftFill } from "@remixicon/react";
 
 import {
     ChakraProvider,
@@ -40,11 +41,11 @@ function Tech() {
     <ChakraProvider>
         <Stack>
             <Container maxW='container.lg' mt={30} mb={30}>
-                <Heading>
+                <Heading id='Tech Stack'>
                     Tech Stack
                 </Heading>
                 <Stack direction={'row'} mt={30} mb={30}>
-                  <Button input='M365' event={handleViewChange} info={'default'}/>
+                  <Button input='M365' event={handleViewChange} info={'default'} />
                   <Button input='Frontend' event={handleViewChange} info={'alternate'}/>
                 </Stack>
                 <Stack gap="4" direction="row" wrap="wrap" mt={30} mb={30}>
