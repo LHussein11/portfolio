@@ -8,7 +8,7 @@ import {
     Heading,
   } from '@chakra-ui/react'
 
-  import Card from '../components/Card'
+  import Card from '../../public/Card'
   import Button from '../components/Buttons'
   import data from '../data/tech.json'
 

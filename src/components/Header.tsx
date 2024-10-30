@@ -64,7 +64,7 @@ export default function Simple() {
           <HStack spacing={8} alignItems={'center'}>
             <Box>  
               <WrapItem>
-                <Avatar name='Liban Hussein' src='src\assets\avataaars.png' />
+                <Avatar name='Liban Hussein' src='public\avataaars.png' />
               </WrapItem>
             </Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>

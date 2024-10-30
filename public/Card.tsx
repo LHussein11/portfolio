@@ -6,7 +6,7 @@ import {
     Center
 } from '@chakra-ui/react'
 
-import { Item } from '../pages/Tech'
+import { Item } from '../src/pages/Tech'
 
 type CardProps = {
   dataCard: Item;
