@@ -6,7 +6,7 @@ import {
     Center
 } from '@chakra-ui/react'
 
-import { Item } from '../src/pages/Tech'
+import { Item } from '../pages/Tech'
 
 type CardProps = {
   dataCard: Item;
@@ -20,6 +20,7 @@ function Card({dataCard}: CardProps) {
     height={100}
     direction={{base: 'row', sm: 'row'}}
     variant='outline'
+    borderColor='#90cdf4'
     >
       <Center>
       <CardBody>

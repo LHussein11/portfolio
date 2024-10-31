@@ -9,7 +9,7 @@ import {
   };
   
   const Buttons: React.FC<ButtonProps> = ({ input, event, info }) => {
-    return <Button onClick={() => event(info)}>{input}</Button>;
+    return <Button colorScheme='blue' color='white' onClick={() => event(info)}>{input}</Button>;
   };
 
 export default Buttons

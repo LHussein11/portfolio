@@ -8,7 +8,7 @@ import {
     Heading,
   } from '@chakra-ui/react'
 
-  import Card from '../../public/Card'
+  import Card from '../components/Card'
   import Button from '../components/Buttons'
   import data from '../data/tech.json'
 
@@ -48,7 +48,7 @@ function Tech() {
                 </Heading>
                 <Stack direction={'row'} mt={30} mb={30}>
                   <Button input='M365' event={handleViewChange} info={'default'} />
-                  <Button input='Frontend' event={handleViewChange} info={'alternate'}/>
+                  <Button  input='Frontend' event={handleViewChange} info={'alternate'}/>
                 </Stack>
                 <Stack gap="4" direction="row" wrap="wrap" mt={30} mb={30}>
                 {dataToShow.map(item => (

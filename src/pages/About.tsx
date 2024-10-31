@@ -27,20 +27,20 @@ function About() {
     <ChakraProvider theme={theme}>
             <Container maxW='container.lg' mt={30} mb={30}>
             <Stack spacing={'20px'}>
-                <Heading fontWeight={'bold'} fontSize={'5xl'}>Welcome! <span className='handEmoji'
+                <Heading fontWeight={'bold'} fontSize={'7xl'}>Welcome! <span className='handEmoji'
                 >👋</span>
                 </Heading>
                 <Stack spacing={'10px'}>
-                    <Text id='About Me'>I'm a passionate Microsoft 365 & Frontend Developer with a knack for transforming innovative ideas into reality. With expertise in SharePoint, Power Platform, and Teams, 
+                    <Text fontWeight='medium' id='About Me'>I'm a passionate Microsoft 365 & Frontend Developer with a knack for transforming innovative ideas into reality. With expertise in SharePoint, Power Platform, and Teams, 
                     </Text>
-                    <Text>
+                    <Text fontWeight='medium'>
                     I specialize in creating seamless digital experiences that enhance productivity and collaboration.    
                     </Text>   
-                    <Text>
+                    <Text fontWeight='medium'>
                     Driven by a love for technology and continuous learning, I aim to empower organizations to harness the full potential of Microsoft 365 solutions. Let's build the future together! 
                     </Text>
                     <Stack direction={'row'} mt={5} >
-                      <Button>
+                      <Button colorScheme='blue' color='white'>
                         <a href={resume} target='_blank'>
                         Download CV
                         </a>

@@ -11,7 +11,8 @@ import {
   useColorModeValue,
   useColorMode,
   Stack,
-  WrapItem
+  WrapItem,
+  Text
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
@@ -23,7 +24,7 @@ interface Props {
   children: React.ReactNode
 }
 
-const Links = ['About Me', 'Tech Stack']
+const Links = ['About Me', 'Tech Stack', 'Contact']
 
 export const NavLink = (props: Props) => {
   const { children } = props
@@ -70,7 +71,9 @@ export default function Simple() {
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
                 <NavLink key={link}>
-                  <Link to={link}> {link}</Link>
+                  <Link  to={link}> 
+                    <Text fontWeight='bold'>{link}</Text>
+                  </Link>
                 </NavLink>
               ))}
             </HStack>
@@ -89,7 +92,9 @@ export default function Simple() {
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
                 <NavLink key={link}>
-                  <Link to={link}> {link}</Link>
+                  <Link to={link}>
+                    <Text fontWeight='bold'>{link}</Text>
+                  </Link>
                 </NavLink>
               ))}
             </Stack>
