@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 
@@ -34,7 +34,8 @@ function Contact() {
 
         emailjs.send(serviceId, templateId, templateParams, publicKey)
         .then((response) => {
-            console.log('Email sent successfully', response)
+            console.log('Email sent successfully', response, email)
+            console.log(templateParams)
             setName('');
             setEmail('');
             setMessage('');
@@ -43,30 +44,14 @@ function Contact() {
             console.log('Error sending email', error)
         })
     }
-
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth - 150)
-    useEffect(() => {
-      const handleResize = () => {
-        setWindowWidth(window.innerWidth - 150);
-      };
-  
-      // Attach the event listener
-      window.addEventListener('resize', handleResize);
-  
-      // Cleanup the event listener on component unmount
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []); //Empty dependency array - effect runs once after the initial render
         
-
 
   return (
     <Container  maxW='container.lg' mt={30} mb={30}>
-        <Heading>Contact Me</Heading>
-        <Flex width="full" mt={30} mb={30}>
+        <Heading id="Contact">Contact Me</Heading>
+        <Flex width="full" mt={30} mb={30} direction={{ base: "column", md: "row" }}>
             <form onSubmit={handleSubmit}>
-            <Box width={windowWidth}>
+            <Box flex="1" maxW={200}>
                 <VStack spacing={5}>
                 <FormControl isRequired>
                     <FormLabel>Name</FormLabel>
