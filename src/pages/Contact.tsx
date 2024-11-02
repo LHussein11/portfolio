@@ -51,7 +51,7 @@ function Contact() {
         <Heading id="Contact">Contact Me</Heading>
         <Flex width="full" mt={30} mb={30} direction={{ base: "column", md: "row" }}>
             <form onSubmit={handleSubmit}>
-            <Box flex="1" maxW={200}>
+            <Box flex="1" maxW={500} minW={350}>
                 <VStack spacing={5}>
                 <FormControl isRequired>
                     <FormLabel>Name</FormLabel>
