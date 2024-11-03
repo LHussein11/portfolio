@@ -19,6 +19,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { Avatar } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
 import { Link } from 'react-scroll'
+import { SE, GB } from 'country-flag-icons/react/3x2'
 
 interface Props {
   children: React.ReactNode
@@ -44,6 +45,8 @@ export const NavLink = (props: Props) => {
     </Box>
   )
 }
+
+const lang = 'en';
 
 export default function Simple() {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -79,11 +82,14 @@ export default function Simple() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
+            <HStack spacing={4}>
             <Menu>
               <Button onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
             </Menu>
+            {lang === 'en' ? <GB width={20} height={20}/> : <SE title='Sverige' width={20} height={20}/>}
+            </HStack>
           </Flex>
         </Flex>
 

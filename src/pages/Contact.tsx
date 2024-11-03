@@ -51,7 +51,7 @@ function Contact() {
         <Heading id="Contact">Contact Me</Heading>
         <Flex width="full" mt={30} mb={30} direction={{ base: "column", md: "row" }}>
             <form onSubmit={handleSubmit}>
-            <Box flex="1" maxW={500} minW={350}>
+            <Box flex="1" maxW={500} minW={300}>
                 <VStack spacing={5}>
                 <FormControl isRequired>
                     <FormLabel>Name</FormLabel>
@@ -69,7 +69,7 @@ function Contact() {
                     <Input 
                     type="email" 
                     name='userEmail'
-                    placeholder="test@test.com" 
+                    placeholder="Email adress" 
                     borderColor="blue.300"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
