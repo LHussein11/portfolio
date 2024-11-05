@@ -34,7 +34,7 @@ function About() {
     <ChakraProvider theme={theme}>
             <Container maxW='container.lg' mt={30} mb={30}>
             <Stack spacing={'20px'}>
-                <Heading fontWeight={'bold'} fontSize={'7xl'}>                  {
+                <Heading fontWeight={'bold'} fontSize={lang === 'en' ? '7xl' : '6xl'}>                  {
                   lang === 'en' ? t('greeting') : t('greeting')
                   } <span className='handEmoji'
                 >👋</span>
