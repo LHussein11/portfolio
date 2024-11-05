@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next'
+import { useLang } from '../state/LangContext'
 
 
 import {
@@ -18,6 +20,9 @@ function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+
+    const { lang } = useLang();
+    const { t } = useTranslation()  
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -48,28 +53,28 @@ function Contact() {
 
   return (
     <Container  maxW='container.lg' mt={30} mb={30}>
-        <Heading id="Contact">Contact Me</Heading>
+        <Heading id="Contact">{lang === 'en' ? t('contact') : t('contact')}</Heading>
         <Flex width="full" mt={30} mb={30} direction={{ base: "column", md: "row" }}>
             <form onSubmit={handleSubmit}>
             <Box flex="1" maxW={500} minW={300}>
                 <VStack spacing={5}>
                 <FormControl isRequired>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>{lang === 'en' ? t('name') : t('name')}</FormLabel>
                     <Input 
                     type="text" 
                     name='userName'
-                    placeholder="Your name"  
+                    placeholder={lang === 'en' ? t('nameInput') : t('nameInput')} 
                     borderColor="blue.300"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     />
                 </FormControl>
                 <FormControl isRequired>
-                    <FormLabel>Email adress</FormLabel>
+                    <FormLabel>{lang === 'en' ? t('email') : t('email')}</FormLabel>
                     <Input 
                     type="email" 
                     name='userEmail'
-                    placeholder="Email adress" 
+                    placeholder={lang === 'en' ? t('emailInput') : t('emailInput')}
                     borderColor="blue.300"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -79,10 +84,10 @@ function Contact() {
 
                 </FormControl>
                 <FormControl isRequired>
-                <FormLabel>Message</FormLabel>
+                <FormLabel>{lang === 'en' ? t('message') : t('message')}</FormLabel>
                     <Textarea 
                         name='message'
-                        placeholder='Your Message'
+                        placeholder={lang === 'en' ? t('messageInput') : t('messageInput')}
                         rows={6}
                         resize="none"
                         borderColor="blue.300"
@@ -92,7 +97,7 @@ function Contact() {
                 </FormControl>
                 <Box width={'full'}>
                 <Button colorScheme='blue' color={'white'}  mt={4} type="submit">
-                    Send Message
+                {lang === 'en' ? t('msgBtn') : t('msgBtn')}
                 </Button>
                 </Box>
                 </VStack>

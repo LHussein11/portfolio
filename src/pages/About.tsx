@@ -10,7 +10,10 @@ import {
 import { extendTheme } from '@chakra-ui/react'
 import '../App.css'
 import resume from '../../public/My Resume.pdf'
-//import Button from '../components/Buttons' 
+import { useTranslation } from 'react-i18next'
+import { useLang } from '../state/LangContext'
+
+
 
   const theme = extendTheme({
     fontSize: {
@@ -22,27 +25,40 @@ import resume from '../../public/My Resume.pdf'
 
 
 function About() {
+  const { lang } = useLang();
+
+  const { t } = useTranslation()  
+ 
   return (
     <>
     <ChakraProvider theme={theme}>
             <Container maxW='container.lg' mt={30} mb={30}>
             <Stack spacing={'20px'}>
-                <Heading fontWeight={'bold'} fontSize={'7xl'}>Welcome! <span className='handEmoji'
+                <Heading fontWeight={'bold'} fontSize={'7xl'}>                  {
+                  lang === 'en' ? t('greeting') : t('greeting')
+                  } <span className='handEmoji'
                 >👋</span>
                 </Heading>
                 <Stack spacing={'10px'}>
-                    <Text fontWeight='medium' id='About Me'>I'm a passionate Microsoft 365 & Frontend Developer with a knack for transforming innovative ideas into reality. With expertise in SharePoint, Power Platform, and Teams, 
+                    <Text fontWeight='medium' id='About Me'>
+                    {
+                  lang === 'en' ? t('introOne') : t('introOne')
+                  }
                     </Text>
                     <Text fontWeight='medium'>
-                    I specialize in creating seamless digital experiences that enhance productivity and collaboration.    
+                    {
+                  lang === 'en' ? t('introTwo') : t('introTwo')
+                  }
                     </Text>   
                     <Text fontWeight='medium'>
-                    Driven by a love for technology and continuous learning, I aim to empower organizations to harness the full potential of Microsoft 365 solutions. Let's build the future together! 
+                    {
+                  lang === 'en' ? t('introThree') : t('introThree')
+                  }
                     </Text>
                     <Stack direction={'row'} mt={5} >
                       <Button colorScheme='blue' color='white'>
                         <a href={resume} target='_blank'>
-                        Download CV
+                        {lang === 'en' ? t('dwnBtn') : t('dwnBtn')}
                         </a>
                       </Button>
                     </Stack>

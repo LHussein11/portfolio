@@ -11,6 +11,8 @@ import {
   import Card from '../components/Card'
   import Button from '../components/Buttons'
   import data from '../data/tech.json'
+  import { useTranslation } from 'react-i18next'
+  import { useLang } from '../state/LangContext'
 
   const searchItem = "m365";
   data.defaultData.filter(item => console.log(item.tech === searchItem))
@@ -29,6 +31,8 @@ import {
   
 
 function Tech() {
+  const { lang } = useLang();
+  const { t } = useTranslation()  
 
   const techData: Data = data;
 
@@ -44,7 +48,7 @@ function Tech() {
         <Stack>
             <Container maxW='container.lg' mt={30} mb={30}>
                 <Heading id='Tech Stack'>
-                    Tech Stack
+                    {lang === 'en' ? t('stack') : t('stack')}
                 </Heading>
                 <Stack direction={'row'} mt={30} mb={30}>
                   <Button input='M365' event={handleViewChange} info={'default'} />

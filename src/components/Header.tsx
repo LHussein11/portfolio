@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect } from 'react'
+
 import {
   Box,
   Flex,
@@ -20,6 +22,9 @@ import { Avatar } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
 import { Link } from 'react-scroll'
 import { SE, GB } from 'country-flag-icons/react/3x2'
+import { useLang } from '../state/LangContext'
+
+import { changeLanguage } from 'i18next'
 
 interface Props {
   children: React.ReactNode
@@ -46,11 +51,19 @@ export const NavLink = (props: Props) => {
   )
 }
 
-const lang = 'en';
 
 export default function Simple() {
   const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onOpen, onClose } = useDisclosure()
+ 
+  const { lang, setLang } = useLang();
+  function changeLang(){
+    setLang(prevLang => prevLang === 'en' ? 'sv' : 'en');
+  }
+
+  useEffect(() => {
+    changeLanguage(lang)
+  }, [lang])
 
   return (
     <>
@@ -88,7 +101,13 @@ export default function Simple() {
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
             </Menu>
-            {lang === 'en' ? <GB width={20} height={20}/> : <SE title='Sverige' width={20} height={20}/>}
+            <Button colorScheme='none' onClick={changeLang}>
+            {
+            lang === 'en' ? 
+            <GB title='English' width={20} height={20}/> : 
+            <SE title='Swedish' width={20} height={20}/>
+            }
+            </Button>
             </HStack>
           </Flex>
         </Flex>
