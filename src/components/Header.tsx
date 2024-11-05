@@ -23,6 +23,8 @@ import { Container } from '@chakra-ui/react'
 import { Link } from 'react-scroll'
 import { SE, GB } from 'country-flag-icons/react/3x2'
 import { useLang } from '../state/LangContext'
+import { useTranslation } from 'react-i18next'
+
 
 import { changeLanguage } from 'i18next'
 
@@ -30,7 +32,15 @@ interface Props {
   children: React.ReactNode
 }
 
-const Links = ['About Me', 'Tech Stack', 'Contact']
+//const Links = ['About Me', 'Tech Stack', 'Contact']
+const Links = [
+  { name: 'About Me', nameSv: 'Om Mig', id: 1 },
+  { name: 'Tech Stack', nameSv: 'Tech Stack', id: 2 },
+  { name: 'Contact', nameSv: 'Kontakt', id: 3 }
+];
+
+
+
 
 export const NavLink = (props: Props) => {
   const { children } = props
@@ -55,6 +65,7 @@ export const NavLink = (props: Props) => {
 export default function Simple() {
   const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const { t } = useTranslation()  
  
   const { lang, setLang } = useLang();
   function changeLang(){
@@ -86,9 +97,11 @@ export default function Simple() {
             </Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink key={link}>
-                  <Link  to={link}> 
-                    <Text fontWeight='bold'>{link}</Text>
+                <NavLink key={link.id}>
+                  <Link  to={link.name}> 
+                    <Text fontWeight='bold'>
+                    {lang === 'en' ? t(link.name) : t(link.nameSv)}
+                      </Text>
                   </Link>
                 </NavLink>
               ))}
@@ -116,9 +129,9 @@ export default function Simple() {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link}>
-                  <Link to={link}>
-                    <Text fontWeight='bold'>{link}</Text>
+                <NavLink key={link.id}>
+                  <Link to={link.name}>
+                    <Text fontWeight='bold'>{link.name}</Text>
                   </Link>
                 </NavLink>
               ))}

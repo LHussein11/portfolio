@@ -10,6 +10,9 @@ i18n
     resources: {
       en: {
         translation: {
+          "headingAbt": "About Me",
+          "headingTech": "Tech Stack",
+          "headingContact": "Contact",
           "greeting": "Welcome!",
           "introOne":"I'm Liban, a passionate Microsoft 365 & Frontend Developer with a knack for transforming innovative ideas into reality, with expertise in SharePoint and the Power Platform." ,
           "introTwo": "I specialize in creating seamless digital experiences that enhance productivity and collaboration.",
@@ -30,6 +33,9 @@ i18n
       },
       sv: {
         translation: {
+            "headingAbt": "Om Mig",
+            "headingTech": "Tech Stack",
+            "headingContact": "Kontakt",
             "greeting": "Välkommen!",
             "introOne": "Mitt namn är Liban och jag är en passionerad Microsoft 365 & Frontend-utvecklare med en förmåga att omvandla innovativa idéer till verklighet, med expertis inom SharePoint och Power Platformen.",
             "introTwo": "Jag specialiserar mig på att skapa sömlösa digitala upplevelser som förbättrar produktivitet och samarbete.",
