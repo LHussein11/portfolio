@@ -131,7 +131,9 @@ export default function Simple() {
               {Links.map((link) => (
                 <NavLink key={link.id}>
                   <Link to={link.name}>
-                    <Text fontWeight='bold'>{link.name}</Text>
+                    <Text fontWeight='bold'>
+                    {lang === 'en' ? t(link.name) : t(link.nameSv)}
+                      </Text>
                   </Link>
                 </NavLink>
               ))}
