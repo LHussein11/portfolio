@@ -36,7 +36,7 @@ function Education() {
     const expData: Data = background;
   return (
     <Container maxW='container.lg' mt={30} mb={30}>
-    <Heading fontWeight={'bold'}>{lang === 'en' ? t('edu') : t('edu')}</Heading>
+    <Heading fontWeight={'bold'}>{lang === 'en' ? t('exp') : t('exp')}</Heading>
     {expData.exp.map(item => (
         <Cards 
     width={500} 
