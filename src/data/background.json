@@ -1,0 +1,30 @@
+{
+    "exp": [
+        {
+            "id": 1,
+            "title": "Software Developer",
+            "company": "Konica Minolta Business Solutions Sweden",
+            "date": "2022-08 - Present"
+          },
+          {
+            "id": 2,
+            "title": "Software Developer",
+            "company": "iMediaMatch",
+            "date": "2021-11 - 2022-01"
+          }
+    ],
+    "edu": [
+        {
+            "id": 1,
+            "title": "Associate degree in Informatics",
+            "school": "Högskolan väst",
+            "date": "2019-09 - 2021-06"
+          },
+          {
+            "id": 2,
+            "title": "Bachelor of Economics",
+            "school": "Örebro universitet",
+            "date": "2012-09 - 2015-06"
+          }
+    ]
+}

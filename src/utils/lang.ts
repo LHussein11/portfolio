@@ -28,7 +28,9 @@ i18n
           "emailInput": "Email adress",
           "message": "Message",
           "messageInput": "Your Message",
-          "msgBtn": "Send Message"
+          "msgBtn": "Send Message",
+          "exp": "Experience",
+          "edu": "Education"
         }
       },
       sv: {
@@ -37,7 +39,7 @@ i18n
             "headingTech": "Tech Stack",
             "headingContact": "Kontakt",
             "greeting": "Välkommen!",
-            "introOne": "Mitt namn är Liban och jag är en passionerad Microsoft 365 & Frontend-utvecklare med en förmåga att omvandla innovativa idéer till verklighet, med expertis inom SharePoint och Power Platformen.",
+            "introOne": "Mitt namn är Liban och jag är en passionerad Microsoft 365 & Frontend-utvecklare med en förmåga att omvandla innovativa idéer till verklighet, med expertis inom SharePoint och Power Platform.",
             "introTwo": "Jag specialiserar mig på att skapa sömlösa digitala upplevelser som förbättrar produktivitet och samarbete.",
             "introThree": "Driven av en passion för teknik och ständig utveckling strävar jag efter att ge organisationer möjligheten att utnyttja Microsoft 365-lösningarnas fulla potential.",
             "dwnBtn": "Hämta CV",
@@ -51,7 +53,9 @@ i18n
             "emailInput": "Email adress",
             "message": "Meddelande",
             "messageInput": "Ditt Meddelande",
-            "msgBtn": "Skicka Meddelande"
+            "msgBtn": "Skicka Meddelande",
+            "exp": "Erfarenhet",
+            "edu": "Utbildning"
 
         }
       }

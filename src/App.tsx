@@ -4,6 +4,8 @@ import About from './pages/About'
 import Tech from './pages/Tech'
 import Contact from './pages/Contact'
 import LangProvider from './state/LangContext'
+import Experience from './pages/Experience'
+import Education from './pages/Education'
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
     <LangProvider>
       <Header></Header>
       <About></About>
+      <Education></Education>
+      <Experience></Experience>
       <Tech></Tech>
       <Contact></Contact>
     </LangProvider>
