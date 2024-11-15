@@ -24,7 +24,7 @@ function Experience() {
     </Heading>
     {expData.edu.map(item => (
         <Cards 
-    width={500} 
+    width={400} 
     height={90}
     direction={{base: 'row', sm: 'row'}}
     variant='outline'

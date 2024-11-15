@@ -39,7 +39,7 @@ function Education() {
     <Heading textDecoration={"underline"} textDecorationColor={"#90cdf4"} fontWeight={'bold'}>{lang === 'en' ? t('exp') : t('exp')}</Heading>
     {expData.exp.map(item => (
         <Cards 
-    width={500} 
+    width={400} 
     height={90}
     direction={{base: 'row', sm: 'row'}}
     variant='outline'
