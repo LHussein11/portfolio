@@ -15,8 +15,8 @@ function App() {
     <LangProvider>
       <Header></Header>
       <About></About>
-      <Education></Education>
       <Experience></Experience>
+      <Education></Education>
       <Tech></Tech>
       <Contact></Contact>
     </LangProvider>
