@@ -53,7 +53,7 @@ function Contact() {
 
   return (
     <Container  maxW='container.lg' mt={30} mb={30}>
-        <Heading id="Contact">{lang === 'en' ? t('contact') : t('contact')}</Heading>
+        <Heading textDecoration={"underline"} textDecorationColor={"#90cdf4"} id="Contact">{lang === 'en' ? t('contact') : t('contact')}</Heading>
         <Flex width="full" mt={30} mb={30} direction={{ base: "column", md: "row" }}>
             <form onSubmit={handleSubmit}>
             <Box flex="1" maxW={500} minW={300}>

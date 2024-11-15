@@ -19,7 +19,9 @@ function Experience() {
     const expData: Data = background;
   return (
     <Container maxW='container.lg' mt={30} mb={30}>
-    <Heading fontWeight={'bold'}>{lang === 'en' ? t('edu') : t('edu')}</Heading>
+    <Heading fontWeight={'bold'}>
+        <Text textDecoration={"underline"} textDecorationColor={"#90cdf4"}>{lang === 'en' ? t('edu') : t('edu')}</Text>
+    </Heading>
     {expData.edu.map(item => (
         <Cards 
     width={500} 

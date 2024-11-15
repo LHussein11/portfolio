@@ -47,7 +47,7 @@ function Tech() {
     <ChakraProvider>
         <Stack>
             <Container maxW='container.lg' mt={30} mb={30}>
-                <Heading id='Tech Stack'>
+                <Heading textDecoration={"underline"} textDecorationColor={"#90cdf4"} id='Tech Stack'>
                     {lang === 'en' ? t('stack') : t('stack')}
                 </Heading>
                 <Stack direction={'row'} mt={30} mb={30}>
