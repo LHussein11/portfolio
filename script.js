@@ -11,6 +11,7 @@ const translations = {
     contactTitle: 'Kontakta Mig', nameLabel: 'Namn', namePlaceholder: 'Ditt Namn',
     emailLabel: 'Email adress', emailPlaceholder: 'Email adress',
     messageLabel: 'Meddelande', messagePlaceholder: 'Ditt Meddelande', sendButton: 'Skicka Meddelande',
+    sendingLabel: 'Skickar…', successMessage: 'Tack! Ditt meddelande har skickats.', errorMessage: 'Något gick fel. Försök igen.',
     footerNote: 'Byggd med omtanke.',
     contactHeading: 'Har du ett projekt i åtanke?',
     contactSubtitle: 'Fyll i formuläret så återkommer jag så snart jag kan.',
@@ -28,6 +29,7 @@ const translations = {
     contactTitle: 'Contact Me', nameLabel: 'Name', namePlaceholder: 'Your Name',
     emailLabel: 'Email address', emailPlaceholder: 'Email address',
     messageLabel: 'Message', messagePlaceholder: 'Your Message', sendButton: 'Send Message',
+    sendingLabel: 'Sending…', successMessage: "Thanks! Your message has been sent.", errorMessage: 'Something went wrong. Please try again.',
     footerNote: 'Built with care.',
     contactHeading: 'Have a project in mind?',
     contactSubtitle: "Fill out the form and I'll get back to you as soon as I can — happy to talk SharePoint, Power Platform, or frontend work.",
@@ -155,6 +157,44 @@ function applyTheme() {
   document.body.classList.toggle('light', !state.dark);
   document.getElementById('theme-toggle').textContent = state.dark ? '☀️' : '🌙';
 }
+
+// ---- Contact form (Formspree AJAX) ----
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+contactForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const t = translations[state.lang];
+  formStatus.className = 'form-status';
+  formStatus.textContent = '';
+  submitBtn.disabled = true;
+  const originalLabel = submitBtn.textContent;
+  submitBtn.textContent = t.sendingLabel;
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { Accept: 'application/json' }
+    });
+
+    if (response.ok) {
+      formStatus.textContent = t.successMessage;
+      formStatus.className = 'form-status success';
+      contactForm.reset();
+    } else {
+      formStatus.textContent = t.errorMessage;
+      formStatus.className = 'form-status error';
+    }
+  } catch (err) {
+    formStatus.textContent = t.errorMessage;
+    formStatus.className = 'form-status error';
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalLabel;
+  }
+});
 
 // ---- Event wiring ----
 document.getElementById('theme-toggle').addEventListener('click', () => {
