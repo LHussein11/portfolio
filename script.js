@@ -30,7 +30,7 @@ const translations = {
     messageLabel: 'Message', messagePlaceholder: 'Your Message', sendButton: 'Send Message',
     footerNote: 'Built with care.',
     contactHeading: 'Have a project in mind?',
-    contactSubtitle: "Fill out the form and I'll get back to you as soon as I can.",
+    contactSubtitle: "Fill out the form and I'll get back to you as soon as I can — happy to talk SharePoint, Power Platform, or frontend work.",
     locationText: 'Stockholm, Sweden',
     tabPowerPlatform: 'Power Platform', tabFrontend: 'Frontend', tabCrm: 'CRM', tabIntegrations: 'Integrations'
   }
