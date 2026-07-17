@@ -1,10 +1,9 @@
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; overflow-x: hidden; max-width: 100%; }
 body {
   font-family: 'Inter', sans-serif;
   position: relative;
   min-height: 100vh;
-  overflow-x: hidden;
   transition: background 0.3s ease, color 0.3s ease;
 }
 ::selection { background: oklch(0.75 0.15 250 / 0.35); }
@@ -218,4 +217,38 @@ body { background: var(--bg); color: var(--text-primary); }
 
 @media (max-width: 640px) {
   .contact-card { grid-template-columns: 1fr; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  .navbar { padding: 14px 20px; flex-wrap: wrap; gap: 12px; }
+  .nav-links { order: 3; width: 100%; justify-content: center; gap: 20px; }
+  .hero { padding: 60px 20px 40px; }
+  .section { padding: 28px 20px; }
+  .hero-p { font-size: 17px; }
+}
+
+@media (max-width: 640px) {
+  .navbar { justify-content: space-between; }
+  .brand-name { display: none; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 14px; }
+  .hero-title { font-size: clamp(30px, 9vw, 42px); gap: 10px; }
+  .section-heading { font-size: 24px; }
+  .badge { font-size: 13px; padding: 6px 12px; }
+  .cta { width: 100%; text-align: center; padding: 14px 20px; }
+  .timeline-item { gap: 12px; }
+  .timeline-card, .edu-card { padding: 14px 16px; }
+  .card-role, .edu-degree { font-size: 16px; }
+  .tabs { gap: 8px; }
+  .tab-btn { padding: 8px 14px; font-size: 13px; }
+  .tech-card { flex: 1 1 100%; }
+  .contact-info { padding: 24px 20px; gap: 20px; }
+  .contact-form { padding: 24px 20px; }
+  .contact-heading { font-size: 22px; }
+  .blob-a, .blob-b { display: none; }
+}
+
+@media (max-width: 400px) {
+  .nav-links { display: none; }
 }
