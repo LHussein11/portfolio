@@ -40,12 +40,13 @@ const translations = {
 
 const experienceData = [
   { role: 'Software Developer', company: 'Navet AB', dates: 'Full-time · Apr 2025 – Present | Stockholm, Sweden', showLine: true },
-  { role: 'Software Developer', company: 'Konica Minolta Nordics', dates: 'Full-time · Aug 2022 – Jul 2024 | Malmö, Sweden', showLine: false }
+  { role: 'Software Developer', company: 'Konica Minolta Nordics', dates: 'Full-time · Aug 2022 – Jul 2024 | Malmö, Sweden', showLine: true },
+  { role: 'Frontend Developer', company: 'iMediaMatch', dates: 'Internship · Nov 2021 – Jan 2022 | Odense, Denmark', showLine: false }
 ];
 
 const educationData = [
-  { degree: 'Associate Degree in Informatics', school: 'Högskolan Väst', dates: '2019-09 – 2021-06' },
-  { degree: 'Bachelor of Economics', school: 'Örebro Universitet', dates: '2012-09 – 2015-06' }
+  { degree: 'Associate Degree in Informatics', school: 'Högskolan Väst', dates: '2019-09 – 2021-06', showLine: true },
+  { degree: 'Bachelor of Economics', school: 'Örebro Universitet', dates: '2012-09 – 2015-06', showLine: false }
 ];
 
 const stackData = {
@@ -112,10 +113,16 @@ function renderExperience() {
 function renderEducation() {
   const container = document.getElementById('education-list');
   container.innerHTML = educationData.map(edu => `
-    <div class="edu-card">
-      <div class="edu-degree">${edu.degree}</div>
-      <div class="edu-school">${edu.school}</div>
-      <div class="edu-dates">${edu.dates}</div>
+    <div class="timeline-item">
+      <div class="timeline-marker">
+        <div class="timeline-dot"></div>
+        ${edu.showLine ? '<div class="timeline-line"></div>' : ''}
+      </div>
+      <div class="timeline-card">
+        <div class="card-role">${edu.degree}</div>
+        <div class="card-company">${edu.school}</div>
+        <div class="card-dates">${edu.dates}</div>
+      </div>
     </div>
   `).join('');
 }
